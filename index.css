@@ -1,0 +1,402 @@
+* {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font-family: "Be Vietnam Pro", sans-serif;
+  }
+  .readable-area {
+    margin: 0 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  html {
+    height: 100%;
+    background-color: #0d1829;
+  }
+  body {
+    height: 100%;
+  }
+  .header {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 32px;
+  }
+  .brief-exp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 3rem 8px 0;
+  }
+  .brief-exp img {
+    max-width: 30%;
+    height: auto;
+    padding: 8px;
+    object-fit: fill;
+  }
+  .brief-exp h1 {
+    font-size: 3.5rem;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+    padding-bottom: 8px;
+  }
+  .brief-exp p {
+    height: auto;
+    text-align: justify;
+  }
+  .f1-header {
+    max-width: 576px;
+    opacity: 75%;
+    border: solid 2px #fffbbf;
+    padding: 8px;
+    transition: scale 350ms ease, opacity 350ms linear;
+  }
+  .f1-header:hover {
+    scale: 1.05;
+    opacity: 0.9;
+  }
+  /* image gallery */
+  .image-gallery {
+    display: grid;
+    padding: 2rem;
+    gap: 36px;
+    grid-template-areas:
+      "one two two three"
+      "four four five three"
+      "four four five six";
+  }
+  .grid-card:nth-child(1) {
+    width: 308px;
+    height: 308px;
+    object-fit: cover;
+    grid-area: one;
+  }
+  .grid-card:nth-child(2) {
+    width: 664px;
+    height: 308px;
+    object-fit: cover;
+    grid-area: two;
+  }
+  .grid-card:nth-child(3) {
+    width: 308px;
+    height: 664px;
+    object-fit: cover;
+    grid-area: three;
+  }
+  .grid-card:nth-child(4) {
+    width: 664px;
+    height: 664px;
+    object-fit: cover;
+    grid-area: four;
+  }
+  .grid-card:nth-child(5) {
+    width: 308px;
+    height: 664px;
+    object-fit: cover;
+    grid-area: five;
+  }
+  .grid-card:nth-child(6) {
+    width: 308px;
+    height: 308px;
+    object-fit: cover;
+    grid-area: six;
+  }
+  .driver-1 {
+    padding: 2rem;
+  }
+  /* hover transition */
+  .image-gallery > img {
+    transition: scale 350ms ease, opacity 350ms linear;
+  }
+  .image-gallery img:hover {
+    scale: 1.05;
+  }
+  .image-gallery img:not(:hover) {
+    opacity: 0.7;
+  }
+  
+  /* .image-gallery:has(img:not(:hover)) img:hover 
+     artinya kalau si image gallery punya image yang ga di hover,
+     maka image yang di hover harus ....
+  
+     .image-gallery:has(img:hover) img:not(:hover)
+     artinya kalau si image gallery punya imagee yang di hover
+     maka image yang ga di hover harus ....
+  
+     kalau bisa jangan pake :has selector masih blm fully
+     disupport sama semua browser kaya firefox */
+  
+  /* driver 1 profile and desc */
+  .driver-1 {
+    display: grid;
+    padding: 24px;
+    gap: 36px;
+    grid-template-areas:
+      "one two two three"
+      "four four five five"
+      "six seven seven eight";
+    grid-template-columns: repeat(4, minmax(260px, 1fr));
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW8zz9JPf3-aDchF6TPNlZTKgWNpVMP2oWsQ&usqp=CAU);
+    border-radius: 24px;
+  }
+  .driver-1 > div {
+    padding: 24px;
+    background: rgba(20, 20, 20, 0.19);
+    border-radius: 32px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.8px);
+    border: 2px solid rgba(255, 255, 255, 0.34);
+    transition: background 350ms ease;
+  }
+  .driver-1 > div:hover {
+    background: rgba(80, 80, 80, 0.19);
+  }
+  .driver-1 > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 32px;
+    border: solid 2px rgba(255, 255, 255, 0.34);
+  }
+  .lh-merc {
+    grid-area: one;
+  }
+  .lh-profile h1 {
+    font-size: 4rem;
+    font-family: "Inter", sans-serif;
+    padding: 32px 32px 8px 32px;
+  }
+  .lh-profile p {
+    font-size: 1.125rem;
+    padding: 0px 32px 32px 32px;
+  }
+  .lh-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    grid-area: two;
+  }
+  .lh-mclaren {
+    grid-area: three;
+  }
+  .identity {
+    grid-area: four;
+  }
+  .identity-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 8px;
+  }
+  .identity-header h1 {
+    font-family: "Inter", sans-serif;
+    font-size: 3rem;
+  }
+  .fa-user {
+    padding-right: 24px;
+  }
+  .identity-exp {
+    text-align: justify;
+    padding-bottom: 12px;
+  }
+  .fa-calendar-days {
+    padding-right: 12px;
+  }
+  .achievements {
+    grid-area: five;
+  }
+  .ach-exp {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 8px;
+  }
+  .ach-exp h1 {
+    font-family: "Inter", sans-serif;
+    font-size: 3rem;
+  }
+  .fa-star {
+    padding-right: 24px;
+  }
+  .achievements ul {
+    list-style-type: none;
+  }
+  .achievements ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 8px;
+  }
+  .fa-icon-ach {
+    padding-right: 16px;
+    color: #ffce44;
+  }
+  .merc-f1 {
+    grid-area: six;
+  }
+  .toto-wolff {
+    grid-area: eight;
+  }
+  .team-desc {
+    grid-area: seven;
+  }
+  .team-desc h1 {
+    font-family: "Inter", sans-serif;
+    font-size: 3rem;
+    padding-bottom: 12px;
+  }
+  .team-desc > p {
+    text-align: justify;
+    padding-bottom: 16px;
+  }
+  .team-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 12px;
+  }
+  .team-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 32px;
+  }
+  .fa-team {
+    padding-right: 12px;
+  }
+  /* mercedes team members */
+  .team-member {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .member {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .member img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 16px;
+    border: solid 2px rgba(255, 255, 255, 0.34);
+  }
+  .name p:nth-child(1) {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  .name p:nth-child(2) {
+    color: rgba(255, 255, 255, 0.75);
+  }
+  .name {
+    padding-left: 12px;
+  }
+  
+  /* credits */
+  .credits-container {
+    opacity: 0.5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px;
+    border-top: solid 2px #bfbfbf;
+  }
+  .credits-container a img {
+    height: 24px;
+    margin-left: 128px;
+  }
+  
+  @media (max-width: 750px) {
+    .readable-area {
+      margin: 0 3%;
+    }
+    /*   header */
+    .header {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    .brief-exp {
+      padding: 24px 0 0 0;
+    }
+    .brief-exp h1 {
+      font-size: 2.75rem;
+      padding-bottom: 0.5rem;
+    }
+    .f1-header {
+      max-width: 90%;
+    }
+  
+    /*   image gallery */
+    .image-gallery {
+      display: grid;
+      padding: 2rem 4px;
+      gap: 18px;
+      grid-template-areas:
+        "two two"
+        "four four"
+        "four four"
+        "one three"
+        "five three"
+        "five six";
+    }
+    .grid-card:nth-child(1) {
+      width: 216px;
+      height: 216px;
+    }
+    .grid-card:nth-child(2) {
+      width: 450px;
+      height: 216px;
+    }
+    .grid-card:nth-child(3) {
+      width: 216px;
+      height: 450px;
+    }
+    .grid-card:nth-child(4) {
+      width: 450px;
+      height: 450px;
+    }
+    .grid-card:nth-child(5) {
+      width: 216px;
+      height: 450px;
+    }
+    .grid-card:nth-child(6) {
+      width: 216px;
+      height: 216px;
+    }
+  
+    /*   driver 1 profile  */
+    .driver-1 {
+      display: grid;
+      padding: 12px;
+      gap: 18px;
+      grid-template-areas:
+        "one three"
+        "two two"
+        "four four"
+        "five five"
+        "six eight"
+        "seven seven";
+      grid-template-columns: repeat(2, minmax(225px, 300px));
+    }
+    .driver-1 h1 {
+      font-size: 2rem;
+    }
+    .lh-profile {
+      text-align: center;
+    }
+    .lh-profile h1 {
+      font-size: 2.5rem;
+      padding: 16px 16px 8px 16px;
+    }
+    .lh-profile p {
+      font-size: 1rem;
+      padding: 0px 16px 16px 16px;
+    }
+  }
